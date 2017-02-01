@@ -45,4 +45,4 @@ function createQuizzes() {
 // TODO: wait here for jQuery to load
 
 switcher = $('<a>[TEST YOURSELF]</a>').click(createQuizzes).css('color', 'red');
-$('#firstHeading').append('&nbsp;').append(switcher);
+$('#firstHeading').append(' ').append(switcher);
