@@ -7,8 +7,8 @@
 // @match        https://en.wikipedia.org/wiki/*
 // @grant        none
 // @require https://code.jquery.com/jquery-2.1.4.min.js
-// @downloadURL  https://gist.githubusercontent.com/hsingh23/67528e4193cf84cad3f1/raw/stash-pullrequest-linker.user.js
-// @updateURL    https://gist.githubusercontent.com/hsingh23/67528e4193cf84cad3f1/raw/stash-pullrequest-linker.user.js
+// @downloadURL  https://github.com/vyahhi/retainer/raw/master/retainer.user.js
+// @updateURL    https://github.com/vyahhi/retainer/raw/master/retainer.user.js
 // ==/UserScript==
 
 function shuffleArray (array) {
