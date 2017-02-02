@@ -2,7 +2,7 @@
 // @name         Retainer
 // @namespace    http://tampermonkey.net/
 // @version      0.1
-// @description  Test your knowledege on websites like
+// @description  Test your knowledge on websites like Wikipedia
 // @author       You
 // @match        https://*.wikipedia.org/wiki/*
 // @grant        none
