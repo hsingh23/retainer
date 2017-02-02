@@ -4,6 +4,8 @@ Test your knowledge on websites like Wikipedia
 
 Built at [MIT Festival of Learning 2017 Hackathon](http://odl.mit.edu/campus/festival-learning/festival-learning-hackathon).
 
+[Motivation] http://slides.com/harshsingh/retainer
+
 # Install
 
 1. Install [Tampermonkey Chrome Extension](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo).
