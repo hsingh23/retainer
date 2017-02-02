@@ -1,7 +1,6 @@
 // ==UserScript==
 // @name         Retainer
-// @namespace    http://tampermonkey.net/
-// @version      0.1
+// @version      0.2
 // @description  Test your knowledge on websites like Wikipedia
 // @author       You
 // @match        https://*.wikipedia.org/wiki/*
