@@ -14,7 +14,7 @@ If you don't want to install Tampermonkey Chrome Extension, you can just add [re
 # Usage
 
 1. Open any Wikipedia page, e.g. [Sigmoid function](https://en.wikipedia.org/wiki/Sigmoid_function).
-2. Click on plus (+) sign on the page.
+2. Click on the list+check icon. The icon is located in the top-right corner of any Wikipedia page, it's blue and round.
 
 # Team:
 * [Harsh Singh](http://github.com/hsingh23)
