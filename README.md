@@ -1,6 +1,8 @@
 # Retainer
 
-Tool to repeat topics based on Wikipedia pages.
+Test your knowledege on websites like Wikipedia!
+
+Built at [MIT Festival of Learning 2017 Hackathon](http://odl.mit.edu/campus/festival-learning/festival-learning-hackathon).
 
 # Install
 
