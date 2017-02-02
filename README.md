@@ -5,12 +5,12 @@ Tool to repeat topics based on Wikipedia pages.
 # Install
 
 1. Install [Tampermonkey Chrome Extension](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo).
-2. Add [this script](https://raw.githubusercontent.com/vyahhi/retainer/master/script.js) to your Tampermonkey scripts.
+2. Open [retainer.user.js](https://github.com/vyahhi/retainer/raw/master/retainer.user.js) in your browser. It will automatically open Tampermonkey. Press Install there.
 
 # Usage
 
 1. Open any Wikipedia page, e.g. [Sigmoid function](https://en.wikipedia.org/wiki/Sigmoid_function).
-2. Click on [TEST YOURSELF] in the title.
+2. Click on plus (+) sign on the page.
 
 # Team:
 * [Harsh Singh](http://github.com/hsingh23)
