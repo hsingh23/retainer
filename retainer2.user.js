@@ -37,24 +37,29 @@ function addStyle (url) {
 }
 
 function getDistractors () {
-  phrases = []
-  document.querySelectorAll('#bodyContent p').forEach((p) => {
+  console.profile('start')
+
+  phrases = new Set()
+  document.querySelectorAll('#bodyContent').forEach((p) => {
     var newHtml = p.innerHTML
-    console.profile('pos tagging')
-    compendium.analyse(p.innerText).forEach(o => {
-      var currentPharses = o.tags.map((x, i) => `${x}${i} `).join('').match(/((?:JJ.?\d+ )?(?:NN.?\d+ )+)/g).map(m => {
-        var start = parseInt(m.match(/\d+/)[0])
-        var end = start + m.split(' ').length - 1
-        var phrase = o.tokens.slice(start, end).map(i => i.raw).join(' ')
-        phrases.push(phrase)
-        newHtml = newHtml.replace(phrase, `<select class='cool'><option>${phrase}</option></select>`)
+    compendium.analyse(newHtml).forEach(o => {
+      var currentPhrases = o.entities.map(i => {
+        newHtml = newHtml.replace(i.raw, `<select class='cool'><option>${i.raw}</option></select>`)
+        phrases.add(i.raw)
+        return i.raw
       })
+    //   var currentPharses = o.tags.map((x, i) => `${x}${i} `).join('').match(/((?:JJ.?\d+ )?(?:NN.?\d+ )+)/g).map(m => {
+    //     var start = parseInt(m.match(/\d+/)[0])
+    //     var end = start + m.split(' ').length - 1
+    //     var phrase = o.tokens.slice(start, end).map(i => i.raw).join(' ')
+    //     phrases.push(phrase)
+    //     newHtml = newHtml.replace(phrase, `<select class='cool'><option>${phrase}</option></select>`)
+    //   })
     })
-    console.profileEnd('pos tagging')
-    console.profile('changing html')
     p.innerHTML = newHtml
-    console.profileEnd('changing html')
   })
+  console.profileEnd('start')
+
   return phrases
 }
 window.getDistractors = getDistractors
