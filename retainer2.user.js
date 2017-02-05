@@ -38,9 +38,9 @@ function addStyle (url) {
 
 function getDistractors () {
   phrases = []
-  $$('#bodyContent p').map((p) => {
+  document.querySelectorAll('#bodyContent p').forEach((p) => {
     var newHtml = p.innerHTML
-
+    console.profile('pos tagging')
     compendium.analyse(p.innerText).forEach(o => {
       var currentPharses = o.tags.map((x, i) => `${x}${i} `).join('').match(/((?:JJ.?\d+ )?(?:NN.?\d+ )+)/g).map(m => {
         var start = parseInt(m.match(/\d+/)[0])
@@ -50,10 +50,14 @@ function getDistractors () {
         newHtml = newHtml.replace(phrase, `<select class='cool'><option>${phrase}</option></select>`)
       })
     })
+    console.profileEnd('pos tagging')
+    console.profile('changing html')
     p.innerHTML = newHtml
+    console.profileEnd('changing html')
   })
   return phrases
 }
+window.getDistractors = getDistractors
 
 function createQuizzes () {
   var links = $('#mw-content-text p a').not($('.reference a'))
@@ -93,5 +97,5 @@ addStyle('https://code.getmdl.io/1.3.0/material.orange-blue.min.css')
 
 var switcher = $(`<button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
   <i class="material-icons">playlist_add_check</i>
-</button>`).click(createQuizzes).css('float', 'right')
+</button>`).click(getDistractors).css('float', 'right')
 $('#firstHeading').append(' ').append(switcher)
